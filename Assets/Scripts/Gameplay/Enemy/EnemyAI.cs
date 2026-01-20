@@ -20,8 +20,11 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         movement = GetComponent<EnemyMovement>(); // Get the EnemyMovement component
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player"); 
-        player = playerObj.transform; // Get the player's transform
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (!playerObj.IsUnityNull())
+        {
+            player = playerObj.transform; // Get the player's transform
+        }
         currentState = EnemyState.Idle; // Initialize state to Idle
 
         attack = GetComponent<EnemyAttack>(); // Get the EnemyAttack component

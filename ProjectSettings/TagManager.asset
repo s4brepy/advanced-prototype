@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Character
   - EnemySpawner
+  - PAUSE
+  - GAMEOVER
+  - GameManager
   layers:
   - Default
   - TransparentFX
