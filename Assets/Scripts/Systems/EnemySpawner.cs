@@ -28,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
             Random.Range(spawnAreaMin.y, spawnAreaMax.y)
         );
         int randomenemy = Random.Range(0, wave.enemyPrefabs.Length);
-        Debug.Log(wave.enemyPrefabs.Length);
+        
         
         GameObject prefab = wave.enemyPrefabs[randomenemy]; // Select a random enemy prefab
         GameObject enemy = Instantiate(prefab, spawnPosition, Quaternion.identity); // Instantiate the enemy

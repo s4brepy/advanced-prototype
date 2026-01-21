@@ -11,6 +11,8 @@ TagManager:
   - PAUSE
   - GAMEOVER
   - GameManager
+  - HeartSystem
+  - Camera
   layers:
   - Default
   - TransparentFX

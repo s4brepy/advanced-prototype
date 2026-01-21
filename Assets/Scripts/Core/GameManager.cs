@@ -28,22 +28,24 @@ public class GameManager : MonoBehaviour
 
         inputHandler = GetComponent<PlayerInputHandler>();
 
-        DontDestroyOnLoad(gameObject);
-        if (SceneManager.GetActiveScene().name == "GAMEPLAY")
-        {
-            SetState(GameStates.PLAYING);
-            
-        }
+        
+ 
 
     }
 
     private void Start()
     {
-        
-        
 
-        
-        
+        if (SceneManager.GetActiveScene().name == "GAMEPLAY")
+        {
+            SetState(GameStates.PLAYING);
+            inputHandler.InputActions.GamePlay.Pause.performed += OnPause;
+
+
+        }
+
+
+
     }
 
     private void Update()     
